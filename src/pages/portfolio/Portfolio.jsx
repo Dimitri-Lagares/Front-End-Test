@@ -3,7 +3,7 @@ import { Send as SendIcon } from '@mui/icons-material';
 import { useContext, useState } from "react";
 import { FormField } from "../../components";
 import { ThemeContext } from "../../contexts/dark-light-theme/ThemeContext";
-// import { HashLink } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import axios from "axios";
 
 
@@ -51,11 +51,11 @@ const Portfolio = () => {
 
   return (
     <main style={{ paddingTop: "9vh", paddingBottom: "8vh", textAlign: "initial" }}>
-      {/* <nav>
+      <nav>
         <HashLink smooth to="#abo">Section 1</HashLink>
         <HashLink smooth to="#tech">Section 2</HashLink>
         <HashLink smooth to="#con">Section 3</HashLink>
-      </nav> */}
+      </nav>
       <section id="abo">
         <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" } }}>
 
