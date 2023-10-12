@@ -17,11 +17,11 @@ const GlobalLanguage = ({ children }) => {
             if (getLanguage.includes("cn")) {
                 setLanguage(cn)
             } else {
-                setLanguage(en) 
+                setLanguage(en)
             }
         }
-    }, [getLanguage])
-console.log(getLanguage);
+    }, [getLanguage, navigator.language])
+
     return (
         <LanguageContext.Provider value={{ setGetLanguage, language }}>
             {children}

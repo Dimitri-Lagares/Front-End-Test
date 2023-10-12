@@ -16,21 +16,21 @@ function App() {
       setIsAllowed(false)
     }
   }
-  // console.log(language.pages[0]);
+
   return (
     <>
       <AppBarMain
-        pages={[{ "id": "aboutme-link", "content": "language.pages[0]" },
-        { "id": "technologies-link", "content": "Tecnologias" },
-        { "id": "projects-link", "content": "Proyectos" },
-        { "id": "contactme-link", "content": "Contactame" }
+        pages={[{ "id": "aboutme-link", "content": language.pages[0] },
+        { "id": "technologies-link", "content": language.pages[1] },
+        { "id": "projects-link", "content": language.pages[2] },
+        { "id": "contactme-link", "content": language.pages[3] }
         ]}
 
         externalLinks={[{ "name": "Youtube", "tag": <YouTube />, "color": "#FE0001", "web": "https://www.youtube.com/channel/UCgrOO8EWuE2XrXt-o48qS0Q" },
         { "name": "GitHub", "tag": <GitHub />, "color": "inherit", "web": "https://github.com/Dimitri-Lagares/" },
         { "name": "WhatsApp", "tag": <WhatsApp />, "color": "#27C04F", "web": "https://api.whatsapp.com/send?phone=573236642619&text=Hola+escribo+desde+tu+página+portafolio" },
         { "name": "LinkedIn", "tag": <LinkedIn />, "color": "#1865BD", "web": "https://co.linkedin.com/in/dimitri-lagares/" },
-        { "name": "Email", "tag": <Email />, "color": "gray", "web": "mailto:lagares.dimitri@gmail.com" }
+        { "name": language.externalLinks[0], "tag": <Email />, "color": "gray", "web": "mailto:lagares.dimitri@gmail.com" }
         ]}
         const languages={[{ "id": "en", "flag": "🇬🇧", "language": "Ingles" },
         { "id": "es", "flag": "🇪🇸", "language": "Español" },

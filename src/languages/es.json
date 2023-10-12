@@ -1,5 +1,8 @@
 {
     "pages": [
         "¿Quien soy?", "Tecnologías", "Proyectos", "Contactame"
+    ],
+    "externalLinks": [
+        "Correo Electrónico"
     ]
 }
