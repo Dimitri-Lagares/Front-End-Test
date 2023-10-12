@@ -1,6 +1,6 @@
 import { Box, Menu, IconButton, Stack } from '@mui/material';
 import React, { useContext, useState } from 'react'
-import { ThemeContext } from '../../../contexts/dark-light-theme/ThemeContext';
+import { ThemeContext } from '../../../contexts';
 
 const MenuBase = ({ children, icon, icon2 = null, tag = false }) => {
 

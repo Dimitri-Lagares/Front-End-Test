@@ -1,16 +1,15 @@
-import { React } from 'react'
+import { useContext } from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
+import { LoginContext } from '../contexts/'
 
-const ProtectedRoute = ({
-    isAllowed,
-    redirectTo = '/login',
-    children
-}) => {
+const ProtectedRoute = ({ children }) => {
+    const redirectTo = '/login'
+    const { isLogged } = useContext(LoginContext)
 
-    if (!isAllowed) {
-        return <Navigate to={redirectTo}/>
+    if (!isLogged) {
+        return <Navigate to={redirectTo} />
     }
-  return children ? children : <Outlet/>
+    return children ? children : <Outlet />
 }
 
 export default ProtectedRoute

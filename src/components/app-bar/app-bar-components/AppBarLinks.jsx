@@ -2,57 +2,72 @@ import { Stack, Box, Button, IconButton, Divider, Typography, Grid, MenuItem } f
 import { Translate as TranslateIcon, Stream as StreamIcon } from "@mui/icons-material"
 import { MenuBase, DarkLightSwitch } from "./"
 import { useContext, useState } from "react"
-import { ThemeContext } from "../../../contexts/dark-light-theme/ThemeContext"
+import { ThemeContext, LanguageContext } from "../../../contexts"
+import { HashLink } from 'react-router-hash-link';
 
-const AppBarLinks = ({ tag, icon2, pages, externalLinks, languages, alternateEmailMD, iconsMD, orientationDisplay }) => {
-    const { colorTheme } =useContext(ThemeContext)
+const AppBarLinks = ({ tag, icon2, pages, externalLinks, languages, alternateEmailMD, iconsMD, orientationDisplay, display=true }) => {
+    const { colorTheme } = useContext(ThemeContext)
+    const { setGetLanguage } = useContext(LanguageContext)
     const [PagesItem, setPagesItem] = useState(null);
-    const [languagesItem, setLanguagesItem] = useState(null);
+    // const [languagesItem, setLanguagesItem] = useState(null);
     // const selected = (event) => {
     //     let itemSelected = event.currentTarget.innerText;
     //     let redirection = '#' + itemSelected;
     //     navigate(redirection);
     //   }
+
+
     return (
         <>
+            {/* <nav>
+<HashLink smooth to="#abo">Section 1</HashLink>
+<HashLink smooth to="#tech">Section 2</HashLink>
+<HashLink smooth to="#contactme">Section 3</HashLink>
+</nav> */}
             <Stack sx={{ display: "flex", flexDirection: [orientationDisplay] }}>
-                <Box sx={{ display: "flex", flexDirection: [orientationDisplay] }}>
-                    {pages.map((page, index) => (
-                        <Button
-                            id={page.id}
-                            key={index}
-                            onClick={(e) => setPagesItem(e.target.id)}
-                            color='inherit'
-                            sx={{ m: "auto" }}
-                        >
-                            {page.content}
-                        </Button>
-                    ))}
-                </Box>
 
-                <Box sx={{ display: "flex", flexDirection: "column", m: "auto" }}>
-                    <MenuBase tag={tag} icon2={icon2} icon={<TranslateIcon color="primary" />} languages={languages}>
-                        {languages.map((language, index) => (
-                            <MenuItem id={language.id} key={index} onClick={() => setLanguagesItem(language.id)} >
-                                <Grid sx={{ display: "flex", flexDirection: "row" }}>
-                                    <Typography
-                                        fontFamily={"Noto Color Emoji"}
-                                        textAlign="center"
-                                        letterSpacing={10}
-                                    >
-                                        {language.flag}
-                                    </Typography>
-                                    <Typography textAlign="center">
-                                        {language.language}
-                                    </Typography>
-                                </Grid>
-                            </MenuItem>
-                        ))}
-                    </MenuBase>
-                </Box>
-                <Box sx={{ m: "auto", display: "flex", flexDirection: "row" }}>
-                    <DarkLightSwitch />
-                </Box>
+                {display &&
+                    <Stack sx={{ display: "flex", flexDirection: [orientationDisplay] }}>
+                        <Box sx={{ display: "flex", flexDirection: [orientationDisplay] }}>
+                            {pages.map((page, index) => (
+                                <Button
+                                    id={page.id}
+                                    key={index}
+                                    onClick={(e) => setPagesItem(e.target.id)}
+                                    color='inherit'
+                                    sx={{ m: "auto" }}
+                                >
+                                    {page.content}
+                                </Button>
+                            ))}
+                        </Box>
+
+                        <Box sx={{ display: "flex", flexDirection: "column", m: "auto" }}>
+                            <MenuBase tag={tag} icon2={icon2} icon={<TranslateIcon color="primary" />} languages={languages}>
+                                {languages.map((languageItem, index) => (
+                                    <MenuItem id={languageItem.id} key={index} onClick={() => {setGetLanguage(languageItem.id); localStorage.setItem("language", languageItem.id)}} >
+                                        <Grid sx={{ display: "flex", flexDirection: "row" }}>
+                                            <Typography
+                                                fontFamily={"Noto Color Emoji"}
+                                                textAlign="center"
+                                                letterSpacing={10}
+                                            >
+                                                {languageItem.flag}
+                                            </Typography>
+                                            <Typography textAlign="center">
+                                                {languageItem.language}
+                                            </Typography>
+                                        </Grid>
+                                    </MenuItem>
+                                ))}
+                            </MenuBase>
+                        </Box>
+                        <Box sx={{ m: "auto", display: "flex", flexDirection: "row" }}>
+                            <DarkLightSwitch />
+                        </Box>
+                    </Stack>
+                }
+
                 <Box sx={{ m: "auto" }}>
                     <Grid sx={{ display: { md: [iconsMD], lg: "inline-flex" } }} >
                         {

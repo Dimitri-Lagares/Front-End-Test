@@ -58,14 +58,16 @@
 //   )
 // }
 
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { IconButton, OutlinedInput, InputLabel, InputAdornment, FormControl, Box, Button, Alert, TextField, Typography } from '@mui/material/';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { LoginContext } from '../../contexts/';
 
-const Login = ({ childToParentData }) => {
+const Login = () => {
 
+  const { isLogged, setIslogged } = useContext(LoginContext);
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -89,19 +91,22 @@ const Login = ({ childToParentData }) => {
       axios.post(`${URL}/auth/login`, { email, password })
         .then((response) => {
           setData(response.data)
-          childToParentData(data)
+          // childToParentData(data)
+          console.log(response.data.token);
+          // setIslogged(true)
+          localStorage.setItem('session',response.data.token)
           navigate('/requests')
           setEmail('')
           setPassword('')
         })
-        .catch((err) => {
-          setEmail('')
-          setPassword('')
-          setData('')
-          setAlertTwo(true)
-          AlertTwoTimeOut()
-          childToParentData(data)
-        });
+        // .catch((err) => {
+        //   setEmail('')
+        //   setPassword('')
+        //   setData('')
+        //   setAlertTwo(true)
+        //   AlertTwoTimeOut()
+        //   // childToParentData(data)
+        // });
     }
   }
 
@@ -115,7 +120,6 @@ const Login = ({ childToParentData }) => {
       setAlertTwo(false);
     }, 3000);
   }
-
   return (
     <div
       style={{

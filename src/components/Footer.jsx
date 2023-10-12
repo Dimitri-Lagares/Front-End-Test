@@ -7,7 +7,7 @@ const Footer = () => {
             <div
                 style={{
                     minHeight: "3.8em",
-                    minWidth: "100vw",
+                    width: "100%",
                     boxShadow: "0px -2px 4px -1px rgba(0,0,0,0.2), 0px -4px 5px 0px rgba(0,0,0,0.14), 0px -1px 10px 0px rgba(0,0,0,0.12)",
                     position: "absolute",
                     bottom: "0px",
