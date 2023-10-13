@@ -7,11 +7,11 @@ import { GlobalTheme, GlobalLogin, GlobalLanguage } from './contexts';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GlobalTheme>
-      <GlobalLogin>
-        <GlobalLanguage>
-        <App />
+      <GlobalLanguage>
+        <GlobalLogin>
+          <App />
+        </GlobalLogin>
       </GlobalLanguage>
-    </GlobalLogin>
-  </GlobalTheme>
+    </GlobalTheme>
   </React.StrictMode >,
 )

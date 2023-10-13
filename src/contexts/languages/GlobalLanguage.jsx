@@ -3,8 +3,8 @@ import LanguageContext from './LanguageContext'
 import { en, es, cn } from "../../languages"
 
 const GlobalLanguage = ({ children }) => {
-    const [language, setLanguage] = useState([])
-    const [getLanguage, setGetLanguage] = useState("")
+    const [language, setLanguage] = useState(en)
+    const [getLanguage, setGetLanguage] = useState("en")
 
     useEffect(() => {
         setGetLanguage(navigator.language.toLowerCase())
@@ -20,10 +20,10 @@ const GlobalLanguage = ({ children }) => {
                 setLanguage(en)
             }
         }
-    }, [getLanguage, navigator.language])
+    }, [getLanguage])
 
     return (
-        <LanguageContext.Provider value={{ setGetLanguage, language }}>
+        <LanguageContext.Provider value={{ setGetLanguage, language, getLanguage }}>
             {children}
         </LanguageContext.Provider>
     )

@@ -60,14 +60,15 @@
 
 import { useState, useContext } from 'react'
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-import { IconButton, OutlinedInput, InputLabel, InputAdornment, FormControl, Box, Button, Alert, TextField, Typography } from '@mui/material/';
+import { IconButton, OutlinedInput, InputLabel, InputAdornment, FormControl, Box, Button, Alert, TextField, Typography, Stack } from '@mui/material/';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { LoginContext } from '../../contexts/';
+import { LoginContext, LanguageContext } from '../../contexts/';
 
 const Login = () => {
 
   const { isLogged, setIslogged } = useContext(LoginContext);
+  const { language, getLanguage } = useContext(LanguageContext)
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -94,19 +95,19 @@ const Login = () => {
           // childToParentData(data)
           console.log(response.data.token);
           // setIslogged(true)
-          localStorage.setItem('session',response.data.token)
+          localStorage.setItem('session', response.data.token)
           navigate('/requests')
           setEmail('')
           setPassword('')
         })
-        // .catch((err) => {
-        //   setEmail('')
-        //   setPassword('')
-        //   setData('')
-        //   setAlertTwo(true)
-        //   AlertTwoTimeOut()
-        //   // childToParentData(data)
-        // });
+      // .catch((err) => {
+      //   setEmail('')
+      //   setPassword('')
+      //   setData('')
+      //   setAlertTwo(true)
+      //   AlertTwoTimeOut()
+      //   // childToParentData(data)
+      // });
     }
   }
 
@@ -121,11 +122,11 @@ const Login = () => {
     }, 3000);
   }
   return (
-    <div
+    <main
       style={{
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: 'space-evenly',
+        justifyContent: 'space-evenly',
         height: '100vh',
       }}
     >
@@ -133,78 +134,92 @@ const Login = () => {
         margin: "auto",
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
-        height: '30rem',
-        width: '20rem',
+        justifyContent: 'space-evenly',
         borderRadius: '3%',
+        width: '20rem',
         backgroundImage: 'linear-gradient(to top left, blue, red, blue)'
-
       }}>
 
-        {alertOne && <Alert severity="warning">debes de llenar los campos</Alert>}
-        {alertTwo && <Alert severity="error">Correo Electrónico o Contraseña incorrectos</Alert>}
+        <section style={{ paddingTop: "15%" }}>
+          <Typography variant='h3' sx={{ fontWeight: 100, fontFamily: 'Rubik Puddles', color: '#1876D2', textAlign: 'center' }}>{language.login.logintitle}</Typography>
+        </section>
 
-        <Typography variant='h3' sx={{ fontWeight: 100, fontFamily: 'Rubik Puddles', color: '#1876D2', textAlign: 'center' }}>Inicio de Sesion</Typography>
-        <Box sx={{ minWidth: 275 }}>
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-          >
+        <section>
+          {alertOne && <Alert severity="warning">debes de llenar los campos</Alert>}
+          {alertTwo && <Alert severity="error">Correo Electrónico o Contraseña incorrectos</Alert>}
+        </section>
 
-            <TextField
-              color='primary'
-              variant='outlined'
-              label="Correo Electrónico"
-              id="outlined"
-              value={email}
-              onChange={OnChangeUser}
-              sx={{ m: 1, width: '25ch' }}
+        <section style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          padding: "10%",
+          paddingTop: alertTwo ? 0 : "10%"
+        }}
+        >
+          <TextField
+            color='primary'
+            variant='outlined'
+            label={language.login.emailfield}
+            id="outlined"
+            value={email}
+            onChange={OnChangeUser}
+            sx={{ m: 1, width: '25ch' }}
+          />
+
+          <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
+            <InputLabel htmlFor="outlined-adornment-password">{language.login.passwordfield}</InputLabel>
+            <OutlinedInput
+              value={password}
+              onChange={OnChangePassword}
+              id="outlined-adornment-password"
+              type={showPassword ? 'text' : 'password'}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword}
+                    onMouseDown={handleMouseDownPassword}
+                    edge="end"
+                  >
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              }
+              label="Password"
             />
+          </FormControl>
+        </section>
 
-            <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-password">Contraseña</InputLabel>
-              <OutlinedInput
-                value={password}
-                onChange={OnChangePassword}
-                id="outlined-adornment-password"
-                type={showPassword ? 'text' : 'password'}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowPassword}
-                      onMouseDown={handleMouseDownPassword}
-                      edge="end"
-                    >
-                      {showPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                  </InputAdornment>
-                }
-                label="Password"
-              />
-            </FormControl>
+        <section style={{ paddingBottom: "15%", }}>
+          <div
+            style={{
+              margin: "auto",
+              paddingLeft: "20%",
+              paddingRight: "20%",
+              display: "flex", flexDirection: getLanguage.includes("cn") ? "row" : "column",
+            }}>
             <Button
               type="submit"
               variant="outlined"
               color="primary"
+              sx={{ margin: "auto", marginTop: .5, width: "fit-content" }}
               onClick={login}
-            >iniciar sesion</Button>
+            >{language.login.loginbutton}</Button>
 
             <Button
               type="submit"
               variant="outlined"
               color="primary"
-              sx={{ marginTop: .5 }}
+              sx={{ margin: "auto", marginTop: .5, width: "fit-content" }}
               onClick={redirectToHome}>
-              regresar
+              {language.login.returnbutton}
             </Button>
-
           </div>
-        </Box>
+        </section>
+
       </div>
-    </div>
+    </main>
   )
 }
 

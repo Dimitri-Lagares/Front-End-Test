@@ -1,8 +1,10 @@
 import { IconButton, Typography, Box } from '@mui/material'
 import Dragon from '/Dragon.svg'
-import { Navigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { LanguageContext } from '../../contexts/'
 
 const PageNotFound = () => {
+  const { language } = useContext(LanguageContext)
   return (
     <Box
       sx={{
@@ -14,10 +16,10 @@ const PageNotFound = () => {
       }}
     >
       <IconButton href='/#/'>
-        <img src={Dragon} className="logo" alt="Dragon" style={{ width:"90%" }} />
+        <img src={Dragon} className="logo" alt={language.PageNotFound.alt} style={{ width:"90%" }} />
       </IconButton>
       <Typography color={'inherit'} sx={{ m: 2 }}>
-        Oops! This page doesn't exist... But don't worry, you can press on the logo to go home
+      {language.PageNotFound.text}
       </Typography>
     </Box>
   )

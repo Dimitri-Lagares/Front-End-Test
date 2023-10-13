@@ -1,8 +1,50 @@
 {
-    "pages": [
-        "about me", "technologies", "projects", "contact me"
-    ],
-    "externalLinks": [
-        "Email"
-    ]
+    "app": {
+        "pages": [
+            "about me",
+            "technologies",
+            "projects",
+            "contact me"
+        ],
+        "externalLinks": [
+            "Email"
+        ],
+        "languages": [
+            "English",
+            "Spanish",
+            "Chinese"
+        ]
+    },
+    "PageNotFound": {
+        "text": "Oops! This page doesn't exist... But don't worry, you can press on the logo to go home",
+        "alt": "Go to Home page"
+    },
+    "requests": {
+        "pagetitle": "Requests",
+        "tabletitles": [
+            "Name",
+            "Email",
+            "Phone Number",
+            "Request",
+            "Comment"
+        ]
+    },
+    "login": {
+        "logintitle": "LOGIN",
+        "emailfield": "Email",
+        "passwordfield": "Password",
+        "loginbutton": "Log in",
+        "returnbutton": "Go back"
+    },
+    "portfolio": {
+        "aboutsection": {
+            "title": "Dear Friend, leave your information here and I will contact you or for more immediate information you can use the WhatsApp button 😜",
+            "namefield": "Name",
+            "emailfield": "Email",
+            "phonenumberfield": "Phone Number",
+            "requestfield": "Request",
+            "commentfield": "Comment",
+            "sendbutton": "send"
+        }
+    }
 }

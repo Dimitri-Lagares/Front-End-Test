@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
-import axios, { Axios } from 'axios';
+import { LanguageContext } from '../contexts'
+import { Axios } from 'axios';
 
 export default function BasicTable() {
   const [data, setData] = useState([]);
   const URL = 'https://integrator-project-back-end.onrender.com';
+  const {language}=useContext(LanguageContext)
 
   useEffect(()=>{
     getData()
@@ -28,11 +30,11 @@ export default function BasicTable() {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Nombre</TableCell>
-            <TableCell>Correo Electronico</TableCell>
-            <TableCell>Celular</TableCell>
-            <TableCell>Solicitud</TableCell>
-            <TableCell>Comentario</TableCell>
+            <TableCell>{language.requests.tabletitles[0]}</TableCell>
+            <TableCell>{language.requests.tabletitles[1]}</TableCell>
+            <TableCell>{language.requests.tabletitles[2]}</TableCell>
+            <TableCell>{language.requests.tabletitles[3]}</TableCell>
+            <TableCell>{language.requests.tabletitles[4]}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
