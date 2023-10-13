@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Box, Stack, Alert, Button, Typography } from "@mui/material";
 import { Send as SendIcon } from '@mui/icons-material';
 import { FormField } from "../../components";
-import { LanguageContext, ThemeContext } from "../../contexts/Index";
+import { LanguageContext, ThemeContext } from "../../contexts";
 import axios from "axios";
 
 const Portfolio = () => {

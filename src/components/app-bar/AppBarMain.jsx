@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { AppBar, Box, Typography, Button } from '@mui/material';
 import { Login as LoginIcon, Logout as LogoutIcon, ExpandMore as ExpandMoreIcon, AccountCircle as AccountCircleIcon } from '@mui/icons-material';
 import { Logo, HamburguerMenu, AppBarLinks } from "./app-bar-components";
-import { ThemeContext } from '../../contexts/Index';
+import { ThemeContext } from '../../contexts';
 import { Link, Navigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 

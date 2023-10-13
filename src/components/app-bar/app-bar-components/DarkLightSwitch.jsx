@@ -1,7 +1,7 @@
 import { styled } from '@mui/material/styles';
 import {Switch, FormControlLabel} from '@mui/material';
 import { useContext } from 'react';
-import { ThemeContext } from '../../../contexts/Index';
+import { ThemeContext } from '../../../contexts';
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,

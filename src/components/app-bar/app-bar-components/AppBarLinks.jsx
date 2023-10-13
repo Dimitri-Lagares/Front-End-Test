@@ -2,7 +2,7 @@ import { Stack, Box, Button, IconButton, Divider, Typography, Grid, MenuItem } f
 import { Translate as TranslateIcon, Stream as StreamIcon } from "@mui/icons-material"
 import { MenuBase, DarkLightSwitch } from "./"
 import { useContext, useState } from "react"
-import { ThemeContext, LanguageContext } from "../../../contexts/Index"
+import { ThemeContext, LanguageContext } from "../../../contexts"
 import { HashLink } from 'react-router-hash-link';
 
 const AppBarLinks = ({ tag, icon2, pages, externalLinks, languages, alternateEmailMD, iconsMD, orientationDisplay, display=true }) => {
