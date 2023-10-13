@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
-import { LoginContext } from '../contexts/'
+import { LoginContext } from '../contexts/Index'
 
 const ProtectedRoute = ({ children }) => {
     const redirectTo = '/login'

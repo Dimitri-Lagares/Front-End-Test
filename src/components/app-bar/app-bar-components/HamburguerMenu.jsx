@@ -2,7 +2,7 @@ import React, { useState, forwardRef, useContext } from 'react';
 import { Menu as MenuIcon, Close as CloseIcon, ExpandMore as ExpandMoreIcon } from "@mui/icons-material"
 import { IconButton, Dialog, Toolbar, Box, List, Slide, Divider } from "@mui/material"
 import { AppBarLinks, Logo } from './'
-import { ThemeContext } from '../../../contexts';
+import { ThemeContext } from '../../../contexts/Index';
 
 const Transition = forwardRef(function Transition(props, ref) {
     return <Slide direction="down" ref={ref} {...props} />;
