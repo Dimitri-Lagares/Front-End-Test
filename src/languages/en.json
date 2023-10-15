@@ -37,7 +37,10 @@
         "returnbutton": "Go back"
     },
     "portfolio": {
-        "aboutsection": {
+        "alert": {
+            "alert": "This website is still under construction, if you want to test the login system and see what is inside you can use <b>email@email.com</b> as email and <b>password</b> <br / ><b>Additionally, I comment that the backend of my page is hosted on a free service, it is quite slow, THANK YOU for your visit! </b>"
+        },
+        "contactsection": {
             "title": "Dear Friend, leave your information here and I will contact you or for more immediate information you can use the WhatsApp button 😜",
             "namefield": "Name",
             "emailfield": "Email",
@@ -47,4 +50,4 @@
             "sendbutton": "send"
         }
     }
-}
+}   

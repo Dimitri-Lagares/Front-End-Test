@@ -37,7 +37,10 @@
         "returnbutton": "回去"
     },
     "portfolio": {
-        "aboutsection": {
+        "alert": {
+            "alert": "该网站仍在建设中，如果您想测试登录系统并查看里面的内容，您可以将其用作电子邮件 email@email.com</b>作为电子邮件和<b>密码</b> <br /> <b>此外，我评论说，由于我的页面后端托管在免费服务上，因此速度相当慢，感谢您的访问！ </b>"
+        },
+        "contactsection": {
             "title": "亲爱的朋友，请在这里留下您的信息，我会与您联系, 或者要更快地获取信息,您可以按 WhatsApp 按钮  😜",
             "namefield": "姓名",
             "emailfield": "电子邮件",
