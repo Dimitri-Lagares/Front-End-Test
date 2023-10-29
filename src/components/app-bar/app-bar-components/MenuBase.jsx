@@ -1,4 +1,4 @@
-import { Box, Menu, IconButton, Stack } from '@mui/material';
+import { Box, Menu, IconButton, Stack, Paper } from '@mui/material';
 import React, { useContext, useState } from 'react'
 import { ThemeContext } from '../../../contexts';
 
@@ -24,20 +24,21 @@ const MenuBase = ({ children, icon, icon2 = null, tag = false }) => {
   return (
     <Stack sx={tag && { borderRadius: "4px", width: {xs:"50vw",sm:"25vw", md:"15vw", lg:"12vw"}, border: "solid", borderWidth: .1, color: "inherit", m: "auto", textAlign: "center" }}>
       <div>
+
         <IconButton
           id="basic-button"
           aria-controls={openMenu ? 'basic-menu' : undefined}
           aria-haspopup="true"
           aria-expanded={openMenu ? "true" : undefined}
           onClick={tag ? handleClickTag : handleClickMenu}
-        >
+          >
           {icon}
           {icon2}
         </IconButton>
 
         {!tag &&
           <Menu
-            id="basic-menu"
+          id="basic-menu"
             anchorEl={anchorEl}
             open={openMenu}
             onClose={handleCloseMenu}
@@ -54,16 +55,17 @@ const MenuBase = ({ children, icon, icon2 = null, tag = false }) => {
                   height: 32,
                   ml: -0.5,
                   mr: 1,
+                  backgroundColor:"green",
                 },
                 '&:before': {
                   content: '""',
                   display: 'block',
+                  bgcolor: backgroundColorTheme,
                   position: 'absolute',
                   top: 0,
                   right: 80,
                   width: 10,
                   height: 10,
-                  bgcolor: backgroundColorTheme,
                   transform: 'translateY(-50%) rotate(45deg)',
                   zIndex: 0,
                 },
@@ -77,7 +79,7 @@ const MenuBase = ({ children, icon, icon2 = null, tag = false }) => {
           <>
             {openTag &&
               <Box
-                sx={{ borderRadius: "4px", width: {xs:"50vw",sm:"25vw", md:"15vw", lg:"12vw"}, border: "solid", borderWidth: .1, color: "inherit", display: "flex", flexDirection: "column" }} >
+              sx={{ borderRadius: "4px", width: {xs:"50vw",sm:"25vw", md:"15vw", lg:"12vw"}, border: "solid", borderWidth: .1, color: "inherit", display: "flex", flexDirection: "column" }} >
                 <div style={{ margin: "auto" }}>
                   {children}
                 </div>

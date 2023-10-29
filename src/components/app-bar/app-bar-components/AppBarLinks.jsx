@@ -1,4 +1,4 @@
-import { Stack, Box, Button, IconButton, Divider, Typography, Grid, MenuItem } from "@mui/material"
+import { Stack, Box, Button, IconButton, Divider, Typography, Grid, MenuItem, Paper } from "@mui/material"
 import { Translate as TranslateIcon, Stream as StreamIcon } from "@mui/icons-material"
 import { MenuBase, DarkLightSwitch } from "./"
 import { useContext, useState } from "react"
@@ -28,14 +28,15 @@ const AppBarLinks = ({ tag, icon2, pages, externalLinks, languages, alternateEma
 
                 {display &&
                     <Stack sx={{ display: "flex", flexDirection: [orientationDisplay] }}>
+
                         <Box sx={{ display: "flex", flexDirection: [orientationDisplay] }}>
                             {pages.map((page, index) => (
                                 <Button
-                                    id={page.id}
-                                    key={index}
-                                    onClick={(e) => setPagesItem(e.target.id)}
-                                    color='inherit'
-                                    sx={{ m: "auto" }}
+                                id={page.id}
+                                key={index}
+                                onClick={(e) => setPagesItem(e.target.id)}
+                                color='inherit'
+                                sx={{ m: "auto" }}
                                 >
                                     {page.content}
                                 </Button>

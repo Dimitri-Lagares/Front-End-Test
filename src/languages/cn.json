@@ -34,7 +34,9 @@
         "emailfield": "电子邮件",
         "passwordfield": "密码",
         "loginbutton": "登录",
-        "returnbutton": "回去"
+        "returnbutton": "回去",
+        "emptyFieldsAlert":"您必须填写字段",
+        "wrongEmailOrPasswordAlert":"错误的电子邮件或者密码"
     },
     "portfolio": {
         "alert": {
@@ -43,10 +45,17 @@
         "contactsection": {
             "title": "亲爱的朋友，请在这里留下您的信息，我会与您联系, 或者要更快地获取信息,您可以按 WhatsApp 按钮  😜",
             "namefield": "姓名",
+            "nameplaceholder":"黄龙",
             "emailfield": "电子邮件",
+            "emailplaceholder":"lagares.dimitri@gmail.com",
+            "countryselectfield":"选择您的前缀",
+            "countryselectplaceholder":"+86",
             "phonenumberfield": "电话号码",
+            "phonenumberplaceholder":13512345487,
             "requestfield": "应用",
+            "requestplaceholder":"价格",
             "commentfield": "评论",
+            "commentplaceholder":"我有一个商业模式想与你分享",
             "sendbutton": "发送"
         }
     }

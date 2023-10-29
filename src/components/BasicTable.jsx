@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { LanguageContext } from '../contexts'
-import { Axios } from 'axios';
+import axios from 'axios';
 
 export default function BasicTable() {
   const [data, setData] = useState([]);

@@ -34,7 +34,9 @@
         "emailfield": "Email",
         "passwordfield": "Password",
         "loginbutton": "Log in",
-        "returnbutton": "Go back"
+        "returnbutton": "Go back",
+        "emptyFieldsAlert":"You must fill out the fields",
+        "wrongEmailOrPasswordAlert":"Wrong email or password"
     },
     "portfolio": {
         "alert": {
@@ -43,10 +45,17 @@
         "contactsection": {
             "title": "Dear Friend, leave your information here and I will contact you or for more immediate information you can use the WhatsApp button 😜",
             "namefield": "Name",
+            "nameplaceholder":"Dimitri Lagares",
             "emailfield": "Email",
+            "emailplaceholder":"lagares.dimitri@gmail.com",
+            "countryselectfield":"select your prefix",
+            "countryselectplaceholder":"+1",
             "phonenumberfield": "Phone Number",
+            "phonenumberplaceholder":9722920008,
             "requestfield": "Request",
+            "requestplaceholder":"price",
             "commentfield": "Comment",
+            "commentplaceholder":"I have a business model that I want to share with you",
             "sendbutton": "send"
         }
     }

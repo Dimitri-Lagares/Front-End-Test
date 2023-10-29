@@ -5,13 +5,11 @@ import './index.css'
 import { GlobalTheme, GlobalLogin, GlobalLanguage } from './contexts';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <GlobalTheme>
-      <GlobalLanguage>
-        <GlobalLogin>
-          <App />
-        </GlobalLogin>
-      </GlobalLanguage>
-    </GlobalTheme>
-  </React.StrictMode >,
+  <GlobalTheme>
+    <GlobalLanguage>
+      <GlobalLogin>
+        <App />
+      </GlobalLogin>
+    </GlobalLanguage>
+  </GlobalTheme>
 )
