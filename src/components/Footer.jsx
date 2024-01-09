@@ -21,7 +21,7 @@ const Footer = () => {
                         transform: 'translate(-61%, -50%)'
                  }}
                 >
-                    <Typography sx={{ fontSize: { xs: "1.4rem", md: "2rem" } }}>
+                    <Typography fontFamily={'Black Ops One'} sx={{ fontSize: { xs: "1.4rem", md: "2rem" } }}>
                         lagares.dimitri@gmail.com
                     </Typography>
                 </div>

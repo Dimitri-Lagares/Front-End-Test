@@ -1,10 +1,10 @@
 {
     "app": {
         "pages": [
-            "about me",
-            "technologies",
-            "projects",
-            "contact me"
+            "About me",
+            "Technologies",
+            "Projects",
+            "Contact me"
         ],
         "externalLinks": [
             "Email"
@@ -35,28 +35,35 @@
         "passwordfield": "Password",
         "loginbutton": "Log in",
         "returnbutton": "Go back",
-        "emptyFieldsAlert":"You must fill out the fields",
-        "wrongEmailOrPasswordAlert":"Wrong email or password"
+        "emptyFieldsAlert": "You must fill out the fields",
+        "wrongEmailOrPasswordAlert": "Wrong email or password"
     },
     "portfolio": {
         "alert": {
             "alert": "This website is still under construction, if you want to test the login system and see what is inside you can use <b>email@email.com</b> as email and <b>password</b> <br / ><b>Additionally, I comment that the backend of my page is hosted on a free service, it is quite slow, THANK YOU for your visit! </b>"
         },
+        "frontsection": {
+            "greeting": "Hi",
+            "greetinghand": "👋",
+            "imtext": "I'm",
+            "developertext": "Developer"
+        },
         "contactsection": {
             "title": "Dear Friend, leave your information here and I will contact you or for more immediate information you can use the WhatsApp button 😜",
             "namefield": "Name",
-            "nameplaceholder":"Dimitri Lagares",
+            "nameplaceholder": "Dimitri Lagares",
             "emailfield": "Email",
-            "emailplaceholder":"lagares.dimitri@gmail.com",
-            "countryselectfield":"select your prefix",
-            "countryselectplaceholder":"+1",
+            "emailplaceholder": "lagares.dimitri@gmail.com",
+            "countryselectfield": "select your prefix",
+            "countryselectplaceholder": "+1",
             "phonenumberfield": "Phone Number",
-            "phonenumberplaceholder":9722920008,
+            "phonenumberplaceholder": 9722920008,
             "requestfield": "Request",
-            "requestplaceholder":"price",
+            "requestplaceholder": "price",
             "commentfield": "Comment",
-            "commentplaceholder":"I have a business model that I want to share with you",
+            "commentplaceholder": "I have a business model that I want to share with you",
             "sendbutton": "send"
         }
-    }
-}   
+    },
+    "languageSelected": "en"
+}

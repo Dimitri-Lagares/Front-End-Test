@@ -30,33 +30,40 @@
         ]
     },
     "login": {
-        "logintitle": "Inicio de sesion",
+        "logintitle": "Inicio de sesión",
         "emailfield": "Correo Electrónico",
         "passwordfield": "Contraseña",
-        "loginbutton": "Iniciar Sesion",
+        "loginbutton": "Iniciar Sesión",
         "returnbutton": "Regresar",
-        "emptyFieldsAlert":"debes de llenar los campos",
-        "wrongEmailOrPasswordAlert":"Correo Electrónico o Contraseña incorrectos"
+        "emptyFieldsAlert": "debes de llenar los campos",
+        "wrongEmailOrPasswordAlert": "Correo Electrónico o Contraseña incorrectos"
     },
     "portfolio": {
         "alert": {
             "alert": "Esta pagina web aun se encuentra en construccion, si deseas probrar el sistema login y ver que hay dentro puedes usar como email <b>email@email.com</b> y como contraseña <b>password</b> <br /><b>adicionalmente comento que como el backend de mi pagina se encuentra alojado en un servicio gratuito es bastante lento, ¡GRACIAS por tu visita! </b> "
         },
+        "frontsection": {
+            "greeting": "Hola",
+            "greetinghand": "👋",
+            "imtext": "Soy",
+            "developertext": "Desarrollador"
+        },
         "contactsection": {
             "title": "Querido Amigo o Amiga deja aqui tus datos y yo me contactare contigo o para mayor inmediates puedes usar el boton de WhatsApp 😜",
             "namefield": "Nombre",
-            "nameplaceholder":"Dimitri Lagares",
+            "nameplaceholder": "Dimitri Lagares",
             "emailfield": "Correo Electrónico",
-            "emailplaceholder":"Lagares.dimitri@gmail.com",
-            "countryselectfield":"Elige tu prefijo",
-            "countryselectplaceholder":"+57",
+            "emailplaceholder": "Lagares.dimitri@gmail.com",
+            "countryselectfield": "Elige tu prefijo",
+            "countryselectplaceholder": "+57",
             "phonenumberfield": "Numero de Celular",
-            "phonenumberplaceholder":3239924916,
+            "phonenumberplaceholder": 3239924916,
             "requestfield": "Solicitud",
-            "requestplaceholder":"Cotización",
+            "requestplaceholder": "Cotización",
             "commentfield": "Comentario",
-            "commentplaceholder":"Tengo un modelo de negocio el cual deseo compartir con usted",
+            "commentplaceholder": "Tengo un modelo de negocio el cual deseo compartir con usted",
             "sendbutton": "Enviar"
         }
-    }
+    },
+    "languageSelected": "es"
 }

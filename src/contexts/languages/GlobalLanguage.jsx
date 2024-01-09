@@ -13,11 +13,14 @@ const GlobalLanguage = ({ children }) => {
         }
         if (getLanguage.includes("es")) {
             setLanguage(es)
+            document.body.style.fontFamily = "Roboto"
         } else {
             if (getLanguage.includes("cn")) {
                 setLanguage(cn)
+                document.body.style.fontFamily = "Noto Serif SC";
             } else {
                 setLanguage(en)
+                document.body.style.fontFamily = "Roboto"
             }
         }
     }, [getLanguage])

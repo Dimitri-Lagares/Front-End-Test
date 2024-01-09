@@ -60,7 +60,7 @@ const AppBarMain = ({ pages, externalLinks, languages }) => {
 
   return (
     <>
-      <AppBar position="fixed" sx={{ background: backgroundColorTheme, color: "inherit", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", py: .5, px: { xs: .5, sm: "3%", md: .5, lg: "3%" } }}>
+      <AppBar  style={{ position:"fixed", background: backgroundColorTheme, color: "inherit", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", py: .5, px: { xs: .5, sm: "3%", md: .5, lg: "3%" } }}>
         <Box sx={{ display: { md: "none" } }}>
           <HamburguerMenu pages={pages} externalLinks={externalLinks} languages={languages} />
         </Box>

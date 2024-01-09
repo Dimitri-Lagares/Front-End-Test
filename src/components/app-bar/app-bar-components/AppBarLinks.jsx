@@ -36,7 +36,7 @@ const AppBarLinks = ({ tag, icon2, pages, externalLinks, languages, alternateEma
                                 key={index}
                                 onClick={(e) => setPagesItem(e.target.id)}
                                 color='inherit'
-                                sx={{ m: "auto" }}
+                                sx={{ m: "auto", fontFamily:'Black Ops One' }}
                                 >
                                     {page.content}
                                 </Button>
@@ -55,7 +55,7 @@ const AppBarLinks = ({ tag, icon2, pages, externalLinks, languages, alternateEma
                                             >
                                                 {languageItem.flag}
                                             </Typography>
-                                            <Typography textAlign="center">
+                                            <Typography sx={{fontFamily:'Black Ops One'}} textAlign="center">
                                                 {languageItem.language}
                                             </Typography>
                                         </Grid>

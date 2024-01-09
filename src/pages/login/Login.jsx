@@ -58,8 +58,8 @@ const Login = () => {
           if (data.data == "Wrong Password" || data.data == "Wrong Email") {
             alert("Wrong password or Email")
           } else {
-            if (data.data.token != undefined ) {
-              navigate('/requests')    
+            if (data.data.token != undefined) {
+              navigate('/requests')
               localStorage.setItem('session', JSON.stringify(data.data.token))
             }
           }
@@ -84,18 +84,49 @@ const Login = () => {
         height: '100vh',
       }}
     >
-      <div style={{
+      {/* <div style={{
         margin: "auto",
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-evenly',
         borderRadius: '3%',
         width: '20rem',
-        backgroundImage: 'linear-gradient(to top left, blue, red, blue)'
-      }}>
+        border: "solid",
+        borderColor:"green",
+        // backgroundImage: 'linear-gradient(to top left, darkblue, lightblue, darkblue)'
+        // backgroundImage: 'linear-gradient(to top left, darkblue 0%, lightblue 40%, lightblue 60%, darkblue 100%)'
+      }}> */}
+
+      <div
+        style={{
+          margin: "auto",
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-evenly',
+          borderRadius: '3%',
+          width: '20rem',
+          boxShadow: '0px 0px 5px 5px rgba(0,0,0,0.9)',
+          // border: ".1px solid transparent", //Creas el borde
+          // borderImage: "linear-gradient(to top left, darkblue, lightblue, darkblue) 1",
+          backgroundImage: 'linear-gradient(to top left, darkblue, lightblue, darkblue)'
+        }}
+      >
 
         <section style={{ paddingTop: "15%" }}>
-          <Typography variant='h3' sx={{ fontWeight: 100, fontFamily: 'Rubik Puddles', color: '#1876D2', textAlign: 'center' }}>{language.login.logintitle}</Typography>
+          <Typography
+            variant='h3'
+            sx={{
+              fontFamily: language.languageSelected === 'cn' ? "Noto Serif SC" : "Black Ops One",
+              fontWeight: language.languageSelected === 'cn' ? 900 : 500,
+              // color: '#1876D2',
+              color: '#1876D2',
+              WebkitTextStroke: '1px #1976d2ff',
+              textAlign: 'center',
+              textShadow: "1px 1px 1px black",
+            }}
+          >
+            {language.login.logintitle}
+          </Typography>
         </section>
 
         <section>
@@ -136,6 +167,7 @@ const Login = () => {
                     onClick={handleClickShowPassword}
                     onMouseDown={handleMouseDownPassword}
                     edge="end"
+                    color='primary'
                   >
                     {showPassword ? <VisibilityOff /> : <Visibility />}
                   </IconButton>
@@ -156,7 +188,7 @@ const Login = () => {
             }}>
             <Button
               type="submit"
-              variant="outlined"
+              variant="contained"
               color="primary"
               sx={{ margin: "auto", marginTop: .5, width: "fit-content" }}
               onClick={login}
@@ -164,7 +196,7 @@ const Login = () => {
 
             <Button
               type="submit"
-              variant="outlined"
+              variant="contained"
               color="primary"
               sx={{ margin: "auto", marginTop: .5, width: "fit-content" }}
               onClick={redirectToHome}>
@@ -173,7 +205,7 @@ const Login = () => {
           </div>
         </section>
 
-        <CircularProgress size={100} sx={{position:"inherit"}}/>
+        {/* <CircularProgress size={100} sx={{ position: "inherit" }} /> */}
 
       </div>
     </main>

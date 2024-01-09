@@ -1,0 +1,234 @@
+.main {
+    padding: 0%;
+    width: 100%;
+    text-align: initial;
+    font-family: 'Roboto', sans-serif;
+}
+
+.front {
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    /* border: blue solid 2px; */
+}
+
+.textFrontContainer {
+    width: 60vw;
+    height: calc(100% - 8vh) !important;
+    /* border: red solid 1px; */
+}
+
+.greetingContainer {
+    display: flex;
+    align-items: center;
+    height: 30%;
+    padding-bottom: 1.5rem;
+}
+
+.frontPhotoContainer {
+    width: 40vw;
+    height: 100%;
+    overflow: hidden;
+    /* border: red solid 2px; */
+}
+
+.typographyMainStyle {
+    background: linear-gradient(to top left, darkblue, lightblue, darkblue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    margin-left: .5rem;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 10vw;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.greeting {
+    font-size: 16vw;
+}
+
+.greetingHand {
+    background: radial-gradient(#b48c6c, #e0c3b5, #b48c6c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Noto Color Emoji;
+    margin-left: 2rem;
+    font-size: 15vw;
+}
+
+.frontPhoto {
+    width: 100%;
+    /* border: red solid 2px; */
+
+}
+
+.esImDeveloperText {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 6.7vw;
+}
+
+.esTypeAnimation {
+    font-size: 10vw;
+}
+
+.imDevelopercontainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.imText {
+    font-size: 7.6vw;
+}
+
+.typeAnimation {
+    font-size: 7.6vw;
+    margin-left: 2rem;
+}
+
+.titlesStyles {
+    font-weight: 400 !important;
+    font-size: 2rem !important;
+    text-align: center;
+}
+
+.innerAboutMe {
+    margin: 2rem;
+}
+
+.hexagon {
+    stroke: darkblue;
+    width: 10vw;
+}
+
+   
+
+@media (min-width: 0px) {
+    .main {
+        margin: 9% 0;
+    }
+
+    .greetingHand,
+    .greeting {
+        font-size: 24.5vw;
+    }
+
+    .esImDeveloperText {
+        margin-bottom: .5rem;
+        margin-top: 0;
+        font-size: 10.5vw;
+    }
+
+    .greetingContainer {
+        padding-bottom: 1.5rem;
+    }
+
+    .esTypeAnimation {
+        font-size: 16.2vw;
+    }
+
+    .textFrontContainer {
+        padding-top: 3vh;
+        height: 33% !important;
+    }
+
+    .frontPhotoContainer {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .imText {
+        font-size: 12.5vw;
+    }
+
+    .typeAnimation {
+        font-size: 12vw;
+        margin-left: 1rem;
+        overflow: hidden;
+    }
+
+    .imDevelopercontainer {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0rem;
+    }
+
+    .developerText {
+        font-size: 18.5vw;
+    }
+}
+
+@media (min-width: 600px) {
+    .main {
+        margin: 4.5% 0;
+    }
+
+    .greetingHand,
+    .greeting {
+        font-size: 16vw;
+    }
+
+    .esImDeveloperText {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        font-size: 6.7vw;
+    }
+
+    .greetingContainer {
+        padding-bottom: 1.5rem;
+    }
+
+    .esTypeAnimation {
+        font-size: 10vw;
+    }
+
+    .textFrontContainer {
+        width: 60vw;
+        height: calc(100% - 8vh) !important;
+        /* border: red solid 1px; */
+    }
+
+    .frontPhotoContainer {
+        width: 40vw;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .imText {
+        font-size: 7.6vw;
+    }
+
+    .typeAnimation {
+        font-size: 7.6vw;
+        margin-left: 2rem;
+    }
+
+    .imDevelopercontainer {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+    }
+
+    .developerText {
+        font-size: 10vw;
+    }
+}
+
+@media (min-width: 900px) {
+    .main {
+        margin: 4% 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main {
+        margin: 3.5% 0;
+    }
+}

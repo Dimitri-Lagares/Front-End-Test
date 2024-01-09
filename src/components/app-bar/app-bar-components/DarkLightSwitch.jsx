@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import {Switch, FormControlLabel} from '@mui/material';
+import { Switch, FormControlLabel } from '@mui/material';
 import { useContext } from 'react';
 import { ThemeContext } from '../../../contexts';
 
